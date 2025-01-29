@@ -1,0 +1,17 @@
+2025-01-29 10:50:10,730 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.111:37237'
+2025-01-29 10:50:11,969 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.111:42945
+2025-01-29 10:50:11,969 - distributed.worker - INFO -          Listening to: tcp://128.117.208.111:42945
+2025-01-29 10:50:11,969 - distributed.worker - INFO -           Worker name:               PBSCluster-0
+2025-01-29 10:50:11,969 - distributed.worker - INFO -          dashboard at:      128.117.208.111:35751
+2025-01-29 10:50:11,969 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.103:33599
+2025-01-29 10:50:11,969 - distributed.worker - INFO - -------------------------------------------------
+2025-01-29 10:50:11,969 - distributed.worker - INFO -               Threads:                          1
+2025-01-29 10:50:11,969 - distributed.worker - INFO -                Memory:                   9.31 GiB
+2025-01-29 10:50:11,969 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-vq8uon1g
+2025-01-29 10:50:11,969 - distributed.worker - INFO - -------------------------------------------------
+2025-01-29 10:50:13,627 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-01-29 10:50:13,627 - distributed.worker - INFO -         Registered to: tcp://128.117.208.103:33599
+2025-01-29 10:50:13,627 - distributed.worker - INFO - -------------------------------------------------
+2025-01-29 10:50:13,628 - distributed.core - INFO - Starting established connection to tcp://128.117.208.103:33599
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024a/share/proj failed
+2025-01-29 10:51:21,682 - distributed.utils_perf - INFO - full garbage collection released 126.74 MiB from 502 reference cycles (threshold: 9.54 MiB)
