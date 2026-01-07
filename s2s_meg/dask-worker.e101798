@@ -1,0 +1,26 @@
+2025-10-15 12:44:43,714 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.180:38885'
+2025-10-15 12:44:48,436 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.180:37591
+2025-10-15 12:44:48,436 - distributed.worker - INFO -          Listening to: tcp://128.117.208.180:37591
+2025-10-15 12:44:48,436 - distributed.worker - INFO -           Worker name:               PBSCluster-1
+2025-10-15 12:44:48,437 - distributed.worker - INFO -          dashboard at:      128.117.208.180:34863
+2025-10-15 12:44:48,437 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.178:38615
+2025-10-15 12:44:48,437 - distributed.worker - INFO - -------------------------------------------------
+2025-10-15 12:44:48,437 - distributed.worker - INFO -               Threads:                          1
+2025-10-15 12:44:48,437 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-15 12:44:48,437 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-i3obffdo
+2025-10-15 12:44:48,437 - distributed.worker - INFO - -------------------------------------------------
+2025-10-15 12:44:55,861 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-15 12:44:55,862 - distributed.worker - INFO -         Registered to: tcp://128.117.208.178:38615
+2025-10-15 12:44:55,862 - distributed.worker - INFO - -------------------------------------------------
+2025-10-15 12:44:55,862 - distributed.core - INFO - Starting established connection to tcp://128.117.208.178:38615
+2025-10-15 12:46:10,404 - distributed.core - INFO - Event loop was unresponsive in Worker for 9.34s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-15 12:49:50,529 - distributed.utils_perf - INFO - full garbage collection released 17.25 MiB from 521 reference cycles (threshold: 9.54 MiB)
+=>> PBS: job killed: walltime 7220 exceeded limit 7200
+2025-10-15 14:44:51,986 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-15 14:44:51,986 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.180:38885'. Reason: signal-15
+2025-10-15 14:44:51,986 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-15 14:44:52,009 - distributed.nanny - INFO - Worker process 2518 was killed by signal 15
+2025-10-15 14:44:52,012 - distributed.dask_worker - INFO - End worker
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Cgroup memsw limit exceeded: 

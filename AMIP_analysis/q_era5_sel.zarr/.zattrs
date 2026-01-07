@@ -1,0 +1,11 @@
+{
+    "CONVERSION_DATE": "Fri Jul 12 06:35:02 MDT 2019",
+    "CONVERSION_PLATFORM": "Linux casper05 3.10.0-693.21.1.el7.x86_64 #1 SMP Wed Mar 7 19:03:37 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux",
+    "Conventions": "CF-1.6",
+    "DATA_SOURCE": "ECMWF: https://cds.climate.copernicus.eu, Copernicus Climate Data Store",
+    "NCO": "netCDF Operators version 4.7.4 (http://nco.sf.net)",
+    "NETCDF_COMPRESSION": "NCO: Precision-preserving compression to netCDF4/HDF5 (see \"history\" and \"NCO\" global attributes below for specifics).",
+    "NETCDF_CONVERSION": "CISL RDA: Conversion from ECMWF GRIB 1 data to netCDF4.",
+    "NETCDF_VERSION": "4.6.1",
+    "history": "Fri Jul 12 06:35:34 2019: ncks -4 --ppc default=7 e5.oper.an.pl.128_133_q.ll025sc.1995060100_1995060123.unc.nc e5.oper.an.pl.128_133_q.ll025sc.1995060100_1995060123.nc"
+}

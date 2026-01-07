@@ -1,0 +1,7 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "time"
+    ],
+    "long_name": "UTC date yyyy-mm-dd hh:00:00 as yyyymmddhh",
+    "units": "Gregorian_year month day hour"
+}

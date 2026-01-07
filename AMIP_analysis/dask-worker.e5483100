@@ -1,0 +1,134 @@
+2025-06-26 14:33:06,207 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.184:42131'
+2025-06-26 14:33:06,810 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.184:45923
+2025-06-26 14:33:06,810 - distributed.worker - INFO -          Listening to: tcp://128.117.208.184:45923
+2025-06-26 14:33:06,810 - distributed.worker - INFO -           Worker name:               PBSCluster-0
+2025-06-26 14:33:06,810 - distributed.worker - INFO -          dashboard at:      128.117.208.184:35733
+2025-06-26 14:33:06,810 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.173:33091
+2025-06-26 14:33:06,810 - distributed.worker - INFO - -------------------------------------------------
+2025-06-26 14:33:06,810 - distributed.worker - INFO -               Threads:                          1
+2025-06-26 14:33:06,810 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-06-26 14:33:06,810 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-zl76r4bz
+2025-06-26 14:33:06,810 - distributed.worker - INFO - -------------------------------------------------
+2025-06-26 14:33:06,993 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-06-26 14:33:06,993 - distributed.worker - INFO -         Registered to: tcp://128.117.208.173:33091
+2025-06-26 14:33:06,993 - distributed.worker - INFO - -------------------------------------------------
+2025-06-26 14:33:06,993 - distributed.core - INFO - Starting established connection to tcp://128.117.208.173:33091
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+2025-06-26 14:34:56,237 - distributed.worker - WARNING - Compute Failed
+Key:       ('groupby_nansum-chunk-groupby-cohort-033e1771b54a02e0fdd80a1df6b95a7a', 0, 0, 90)
+State:     executing
+Function:  execute_task
+args:      ((functools.partial(<function reindex_intermediates at 0x152aa0678220>, agg='nansum', fill: dict_values([nan, (0,), nan, (nan,)]), dtype: {'user': None, 'final': dtype('float32'), 'numpy': (dtype('float32'),), 'intermediate': (dtype('float32'),)}
+chunk: ('nansum',)
+combine: ('sum',)
+finalize: None
+min_count: 0, unique_groups=Index([1], dtype='int64')), (subgraph_callable-9e0a27aed8143c4de4429cbca39ceaff, array([1, 1, 1]), array([], shape=(3, 0, 97), dtype=float32), array([], shape=(3, 0, 97), dtype=float32))))
+kwargs:    {}
+Exception: "ValueError('cannot reshape array of size 0 into shape (0,97,newaxis)')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/optimization.py", line 1001, in __call__\n    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 157, in get\n    result = _execute_task(task, cache)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 127, in _execute_task\n    return func(*(_execute_task(a, cache) for a in args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/toolz/functoolz.py", line 487, in __call__\n    ret = self.first(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/core.py", line 1062, in chunk_reduce\n    result = generic_aggregate(\n             ^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregations.py", line 103, in generic_aggregate\n    result = method(\n             ^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregate_npg.py", line 63, in nansum\n    return _get_aggregate(engine).aggregate(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 371, in aggregate\n    return _aggregate_base(\n           ^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 311, in _aggregate_base\n    iv = input_validation(group_idx, a, size=size, order=order, axis=axis, func=func)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 479, in input_validation\n    group_idx, size = _ravel_group_idx(\n                      ^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 390, in _ravel_group_idx\n    group_idx = offset_labels(group_idx_in, a.shape, axis, order, size_in)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 410, in offset_labels\n    + np.arange(np.prod(newshape[:-1]), dtype=int).reshape(newshape) * size\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+
+2025-06-26 14:34:56,243 - distributed.worker - WARNING - Compute Failed
+Key:       ('groupby_nansum-chunk-groupby-cohort-033e1771b54a02e0fdd80a1df6b95a7a', 0, 0, 2)
+State:     executing
+Function:  execute_task
+args:      ((functools.partial(<function reindex_intermediates at 0x152aa0678220>, agg='nansum', fill: dict_values([nan, (0,), nan, (nan,)]), dtype: {'user': None, 'final': dtype('float32'), 'numpy': (dtype('float32'),), 'intermediate': (dtype('float32'),)}
+chunk: ('nansum',)
+combine: ('sum',)
+finalize: None
+min_count: 0, unique_groups=Index([1], dtype='int64')), (subgraph_callable-9e0a27aed8143c4de4429cbca39ceaff, array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]), array([], shape=(10, 0, 97), dtype=float32), array([], shape=(10, 0, 97), dtype=float32))))
+kwargs:    {}
+Exception: "ValueError('cannot reshape array of size 0 into shape (0,97,newaxis)')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/optimization.py", line 1001, in __call__\n    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 157, in get\n    result = _execute_task(task, cache)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 127, in _execute_task\n    return func(*(_execute_task(a, cache) for a in args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/toolz/functoolz.py", line 487, in __call__\n    ret = self.first(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/core.py", line 1062, in chunk_reduce\n    result = generic_aggregate(\n             ^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregations.py", line 103, in generic_aggregate\n    result = method(\n             ^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregate_npg.py", line 63, in nansum\n    return _get_aggregate(engine).aggregate(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 371, in aggregate\n    return _aggregate_base(\n           ^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 311, in _aggregate_base\n    iv = input_validation(group_idx, a, size=size, order=order, axis=axis, func=func)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 479, in input_validation\n    group_idx, size = _ravel_group_idx(\n                      ^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 390, in _ravel_group_idx\n    group_idx = offset_labels(group_idx_in, a.shape, axis, order, size_in)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 410, in offset_labels\n    + np.arange(np.prod(newshape[:-1]), dtype=int).reshape(newshape) * size\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+
+2025-06-26 14:34:56,270 - distributed.worker - WARNING - Compute Failed
+Key:       ('groupby_nansum-chunk-groupby-cohort-033e1771b54a02e0fdd80a1df6b95a7a', 0, 0, 0)
+State:     executing
+Function:  execute_task
+args:      ((functools.partial(<function reindex_intermediates at 0x152aa0678220>, agg='nansum', fill: dict_values([nan, (0,), nan, (nan,)]), dtype: {'user': None, 'final': dtype('float32'), 'numpy': (dtype('float32'),), 'intermediate': (dtype('float32'),)}
+chunk: ('nansum',)
+combine: ('sum',)
+finalize: None
+min_count: 0, unique_groups=Index([1], dtype='int64')), (subgraph_callable-9e0a27aed8143c4de4429cbca39ceaff, array([1, 1, 1, 1, 1, 1, 1, 1]), array([], shape=(8, 0, 97), dtype=float32), array([], shape=(8, 0, 97), dtype=float32))))
+kwargs:    {}
+Exception: "ValueError('cannot reshape array of size 0 into shape (0,97,newaxis)')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/optimization.py", line 1001, in __call__\n    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 157, in get\n    result = _execute_task(task, cache)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 127, in _execute_task\n    return func(*(_execute_task(a, cache) for a in args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/toolz/functoolz.py", line 487, in __call__\n    ret = self.first(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/core.py", line 1062, in chunk_reduce\n    result = generic_aggregate(\n             ^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregations.py", line 103, in generic_aggregate\n    result = method(\n             ^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregate_npg.py", line 63, in nansum\n    return _get_aggregate(engine).aggregate(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 371, in aggregate\n    return _aggregate_base(\n           ^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 311, in _aggregate_base\n    iv = input_validation(group_idx, a, size=size, order=order, axis=axis, func=func)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 479, in input_validation\n    group_idx, size = _ravel_group_idx(\n                      ^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 390, in _ravel_group_idx\n    group_idx = offset_labels(group_idx_in, a.shape, axis, order, size_in)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 410, in offset_labels\n    + np.arange(np.prod(newshape[:-1]), dtype=int).reshape(newshape) * size\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+
+2025-06-26 14:39:10,249 - distributed.worker - WARNING - Compute Failed
+Key:       ('groupby_nansum-chunk-groupby-cohort-033e1771b54a02e0fdd80a1df6b95a7a', 0, 0, 50)
+State:     executing
+Function:  execute_task
+args:      ((functools.partial(<function reindex_intermediates at 0x152aa0678220>, agg='nansum', fill: dict_values([nan, (0,), nan, (nan,)]), dtype: {'user': None, 'final': dtype('float32'), 'numpy': (dtype('float32'),), 'intermediate': (dtype('float32'),)}
+chunk: ('nansum',)
+combine: ('sum',)
+finalize: None
+min_count: 0, unique_groups=Index([1], dtype='int64')), (subgraph_callable-9e0a27aed8143c4de4429cbca39ceaff, array([1, 1, 1]), array([], shape=(3, 0, 97), dtype=float32), array([], shape=(3, 0, 97), dtype=float32))))
+kwargs:    {}
+Exception: "ValueError('cannot reshape array of size 0 into shape (0,97,newaxis)')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/optimization.py", line 1001, in __call__\n    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 157, in get\n    result = _execute_task(task, cache)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 127, in _execute_task\n    return func(*(_execute_task(a, cache) for a in args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/toolz/functoolz.py", line 487, in __call__\n    ret = self.first(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/core.py", line 1062, in chunk_reduce\n    result = generic_aggregate(\n             ^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregations.py", line 103, in generic_aggregate\n    result = method(\n             ^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregate_npg.py", line 63, in nansum\n    return _get_aggregate(engine).aggregate(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 371, in aggregate\n    return _aggregate_base(\n           ^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 311, in _aggregate_base\n    iv = input_validation(group_idx, a, size=size, order=order, axis=axis, func=func)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 479, in input_validation\n    group_idx, size = _ravel_group_idx(\n                      ^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 390, in _ravel_group_idx\n    group_idx = offset_labels(group_idx_in, a.shape, axis, order, size_in)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 410, in offset_labels\n    + np.arange(np.prod(newshape[:-1]), dtype=int).reshape(newshape) * size\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+
+2025-06-26 14:45:34,248 - distributed.worker - WARNING - Compute Failed
+Key:       ('groupby_nansum-chunk-groupby-cohort-033e1771b54a02e0fdd80a1df6b95a7a', 0, 0, 290)
+State:     executing
+Function:  execute_task
+args:      ((functools.partial(<function reindex_intermediates at 0x152aa0678220>, agg='nansum', fill: dict_values([nan, (0,), nan, (nan,)]), dtype: {'user': None, 'final': dtype('float32'), 'numpy': (dtype('float32'),), 'intermediate': (dtype('float32'),)}
+chunk: ('nansum',)
+combine: ('sum',)
+finalize: None
+min_count: 0, unique_groups=Index([1], dtype='int64')), (subgraph_callable-9e0a27aed8143c4de4429cbca39ceaff, array([1, 1, 1]), array([], shape=(3, 0, 97), dtype=float32), array([], shape=(3, 0, 97), dtype=float32))))
+kwargs:    {}
+Exception: "ValueError('cannot reshape array of size 0 into shape (0,97,newaxis)')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/optimization.py", line 1001, in __call__\n    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 157, in get\n    result = _execute_task(task, cache)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 127, in _execute_task\n    return func(*(_execute_task(a, cache) for a in args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/toolz/functoolz.py", line 487, in __call__\n    ret = self.first(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/core.py", line 1062, in chunk_reduce\n    result = generic_aggregate(\n             ^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregations.py", line 103, in generic_aggregate\n    result = method(\n             ^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregate_npg.py", line 63, in nansum\n    return _get_aggregate(engine).aggregate(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 371, in aggregate\n    return _aggregate_base(\n           ^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 311, in _aggregate_base\n    iv = input_validation(group_idx, a, size=size, order=order, axis=axis, func=func)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 479, in input_validation\n    group_idx, size = _ravel_group_idx(\n                      ^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 390, in _ravel_group_idx\n    group_idx = offset_labels(group_idx_in, a.shape, axis, order, size_in)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 410, in offset_labels\n    + np.arange(np.prod(newshape[:-1]), dtype=int).reshape(newshape) * size\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+
+2025-06-26 14:45:34,254 - distributed.worker - WARNING - Compute Failed
+Key:       ('groupby_nansum-chunk-groupby-cohort-033e1771b54a02e0fdd80a1df6b95a7a', 0, 0, 292)
+State:     executing
+Function:  execute_task
+args:      ((functools.partial(<function reindex_intermediates at 0x152aa0678220>, agg='nansum', fill: dict_values([nan, (0,), nan, (nan,)]), dtype: {'user': None, 'final': dtype('float32'), 'numpy': (dtype('float32'),), 'intermediate': (dtype('float32'),)}
+chunk: ('nansum',)
+combine: ('sum',)
+finalize: None
+min_count: 0, unique_groups=Index([1], dtype='int64')), (subgraph_callable-9e0a27aed8143c4de4429cbca39ceaff, array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]), array([], shape=(10, 0, 97), dtype=float32), array([], shape=(10, 0, 97), dtype=float32))))
+kwargs:    {}
+Exception: "ValueError('cannot reshape array of size 0 into shape (0,97,newaxis)')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/optimization.py", line 1001, in __call__\n    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 157, in get\n    result = _execute_task(task, cache)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/core.py", line 127, in _execute_task\n    return func(*(_execute_task(a, cache) for a in args))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/toolz/functoolz.py", line 487, in __call__\n    ret = self.first(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/core.py", line 1062, in chunk_reduce\n    result = generic_aggregate(\n             ^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregations.py", line 103, in generic_aggregate\n    result = method(\n             ^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/flox/aggregate_npg.py", line 63, in nansum\n    return _get_aggregate(engine).aggregate(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 371, in aggregate\n    return _aggregate_base(\n           ^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/aggregate_numpy.py", line 311, in _aggregate_base\n    iv = input_validation(group_idx, a, size=size, order=order, axis=axis, func=func)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 479, in input_validation\n    group_idx, size = _ravel_group_idx(\n                      ^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 390, in _ravel_group_idx\n    group_idx = offset_labels(group_idx_in, a.shape, axis, order, size_in)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/numpy_groupies/utils.py", line 410, in offset_labels\n    + np.arange(np.prod(newshape[:-1]), dtype=int).reshape(newshape) * size\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n'
+
+2025-06-26 15:13:55,123 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 1250, in heartbeat
+    response = await retry_operation(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/utils_comm.py", line 459, in retry_operation
+    return await retry(
+           ^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/utils_comm.py", line 438, in retry
+    return await coro()
+           ^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1398, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 140, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://128.117.208.184:43568 remote=tcp://128.117.208.173:33091>: ConnectionResetError: [Errno 104] Connection reset by peer
+2025-06-26 15:13:55,127 - distributed.core - INFO - Connection to tcp://128.117.208.173:33091 has been closed.
+2025-06-26 15:13:55,128 - distributed.worker - INFO - Stopping worker at tcp://128.117.208.184:45923. Reason: worker-handle-scheduler-connection-broken
+2025-06-26 15:13:55,130 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://128.117.208.184:42131'. Reason: worker-handle-scheduler-connection-broken
+2025-06-26 15:13:55,231 - distributed.client - ERROR - Failed to reconnect to scheduler after 30.00 seconds, closing client
+2025-06-26 15:13:55,242 - distributed.nanny - INFO - Worker closed
+2025-06-26 15:13:57,936 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.184:42131'. Reason: nanny-close-gracefully
+2025-06-26 15:13:57,936 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,20 @@
+2025-10-28 09:18:05,142 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.215:41981'
+2025-10-28 09:18:06,608 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.215:44417
+2025-10-28 09:18:06,610 - distributed.worker - INFO -          Listening to: tcp://128.117.208.215:44417
+2025-10-28 09:18:06,610 - distributed.worker - INFO -           Worker name:              PBSCluster-20
+2025-10-28 09:18:06,610 - distributed.worker - INFO -          dashboard at:      128.117.208.215:37041
+2025-10-28 09:18:06,610 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.173:40025
+2025-10-28 09:18:06,610 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 09:18:06,610 - distributed.worker - INFO -               Threads:                          1
+2025-10-28 09:18:06,610 - distributed.worker - INFO -                Memory:                 100.00 GiB
+2025-10-28 09:18:06,610 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/dask/pbs.279384.casper-pbs/dask/spill/dask-scratch-space/worker-i8dv9sg2
+2025-10-28 09:18:06,610 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 09:18:08,672 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-28 09:18:08,672 - distributed.worker - INFO -         Registered to: tcp://128.117.208.173:40025
+2025-10-28 09:18:08,672 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 09:18:08,673 - distributed.core - INFO - Starting established connection to tcp://128.117.208.173:40025
+2025-10-28 09:24:19,504 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-28 09:24:19,508 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.215:41981'. Reason: signal-15
+2025-10-28 09:24:19,509 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-28 09:24:19,526 - distributed.nanny - INFO - Worker process 39413 was killed by signal 15
+2025-10-28 09:24:19,528 - distributed.dask_worker - INFO - End worker

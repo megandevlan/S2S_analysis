@@ -1,0 +1,16 @@
+2025-10-21 10:09:45,798 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.185:43073'
+2025-10-21 10:09:47,998 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.185:45555
+2025-10-21 10:09:47,998 - distributed.worker - INFO -          Listening to: tcp://128.117.208.185:45555
+2025-10-21 10:09:47,998 - distributed.worker - INFO -           Worker name:              PBSCluster-10
+2025-10-21 10:09:47,998 - distributed.worker - INFO -          dashboard at:      128.117.208.185:45193
+2025-10-21 10:09:47,998 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.174:36679
+2025-10-21 10:09:47,998 - distributed.worker - INFO - -------------------------------------------------
+2025-10-21 10:09:47,998 - distributed.worker - INFO -               Threads:                          1
+2025-10-21 10:09:47,998 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-21 10:09:47,998 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-eauhj6je
+2025-10-21 10:09:47,998 - distributed.worker - INFO - -------------------------------------------------
+2025-10-21 10:09:50,867 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-21 10:09:50,868 - distributed.worker - INFO -         Registered to: tcp://128.117.208.174:36679
+2025-10-21 10:09:50,868 - distributed.worker - INFO - -------------------------------------------------
+2025-10-21 10:09:50,868 - distributed.core - INFO - Starting established connection to tcp://128.117.208.174:36679
+/var/spool/pbs/mom_priv/jobs/150700.casper-pbs.SC: line 9: 41003 Bus error               (core dumped) /glade/work/mdfowler/conda-envs/my-npl-2024b/bin/python -m distributed.cli.dask_worker tcp://128.117.208.174:36679 --name PBSCluster-10 --nthreads 1 --memory-limit 7.45GiB --nanny --death-timeout 60

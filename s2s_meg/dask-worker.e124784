@@ -1,0 +1,85 @@
+2025-10-17 08:19:02,462 - distributed.nanny.memory - WARNING - Ignoring provided memory limit 7.45GiB due to system memory limit of 4.00 GiB
+2025-10-17 08:19:32,463 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.178:39857'. Reason: failure-to-start-<class 'OSError'>
+2025-10-17 08:19:32,463 - distributed.dask_worker - INFO - End worker
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/comm/core.py", line 342, in connect
+    comm = await wait_for(
+           ^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/utils.py", line 1949, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 559, in connect
+    convert_stream_closed_error(self, e)
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 140, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <distributed.comm.tcp.TCPConnector object at 0x14df1fa0b0d0>: ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 667, in start
+    await wait_for(self.start_unsafe(), timeout=timeout)
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/utils.py", line 1949, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/nanny.py", line 358, in start_unsafe
+    comm = await self.rpc.connect(saddr)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1623, in connect
+    return await self._connect(addr=addr, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1567, in _connect
+    comm = await connect(
+           ^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/comm/core.py", line 368, in connect
+    raise OSError(
+OSError: Timed out trying to connect to tcp://128.117.208.178:38327 after 30 s
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 544, in <module>
+    main()  # pragma: no cover
+    ^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 450, in main
+    asyncio_run(run(), loop_factory=get_loop_factory())
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/compatibility.py", line 204, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 447, in run
+    [task.result() for task in done]
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 447, in <listcomp>
+    [task.result() for task in done]
+     ^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/cli/dask_worker.py", line 420, in wait_for_nannies_to_finish
+    await asyncio.gather(*nannies)
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/asyncio/tasks.py", line 694, in _wrap_awaitable
+    return (yield from awaitable.__await__())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 675, in start
+    raise RuntimeError(f"{type(self).__name__} failed to start.") from exc
+RuntimeError: Nanny failed to start.

@@ -1,0 +1,130 @@
+2025-10-20 08:28:03,122 - distributed.nanny.memory - WARNING - Ignoring provided memory limit 7.45GiB due to system memory limit of 4.00 GiB
+2025-10-20 08:28:03,124 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.173:35573'
+2025-10-20 08:28:03,752 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.173:40725
+2025-10-20 08:28:03,752 - distributed.worker - INFO -          Listening to: tcp://128.117.208.173:40725
+2025-10-20 08:28:03,752 - distributed.worker - INFO -           Worker name:               PBSCluster-2
+2025-10-20 08:28:03,752 - distributed.worker - INFO -          dashboard at:      128.117.208.173:41519
+2025-10-20 08:28:03,752 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.173:41689
+2025-10-20 08:28:03,752 - distributed.worker - INFO - -------------------------------------------------
+2025-10-20 08:28:03,752 - distributed.worker - INFO -               Threads:                          1
+2025-10-20 08:28:03,752 - distributed.worker - INFO -                Memory:                   4.00 GiB
+2025-10-20 08:28:03,752 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-_nb3fo_v
+2025-10-20 08:28:03,752 - distributed.worker - INFO - -------------------------------------------------
+2025-10-20 08:28:04,887 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-20 08:28:04,887 - distributed.worker - INFO -         Registered to: tcp://128.117.208.173:41689
+2025-10-20 08:28:04,887 - distributed.worker - INFO - -------------------------------------------------
+2025-10-20 08:28:04,888 - distributed.core - INFO - Starting established connection to tcp://128.117.208.173:41689
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-20 08:38:28,114 - distributed.core - INFO - Connection to tcp://128.117.208.173:41689 has been closed.
+2025-10-20 08:38:28,305 - distributed.worker - INFO - Stopping worker at tcp://128.117.208.173:40725. Reason: worker-handle-scheduler-connection-broken
+2025-10-20 08:38:28,309 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://128.117.208.173:35573'. Reason: worker-handle-scheduler-connection-broken
+2025-10-20 08:38:28,340 - distributed.nanny - INFO - Worker closed
+2025-10-20 08:38:32,838 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.173:35573'. Reason: nanny-close-gracefully
+2025-10-20 08:38:32,839 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,426 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "86fbc23c-6f89-407d-b074-452cfda56fec",
+   "metadata": {},
+   "source": [
+    "# Calculate metrics using climpred\n",
+    "\n",
+    "---\n",
+    "\n",
+    "Now that all of our model and observational data is ready for analysis, we can run this notebook and calculate various metrics using climpred across all models and seasons and compare how they do. It is recommended that you use `dask` to run this notebook as we are looking at geospatial data and making maps. You can start up a `dask` cluster by running the notebook `cluster.ipynb` and copying the Scheduler tcp number into this notebook."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1256f7d8-8da0-42c2-b6c8-dcbd4ce59258",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import cftime\n",
+    "import numpy as np\n",
+    "import xarray as xr\n",
+    "xr.set_options(keep_attrs=True)\n",
+    "import climpred\n",
+    "import intake\n",
+    "from tqdm import tqdm\n",
+    "import dask.array as da\n",
+    "import matplotlib.pyplot as plt\n",
+    "from matplotlib.ticker import FixedLocator\n",
+    "import xskillscore as xs\n",
+    "import warnings\n",
+    "warnings.filterwarnings(\"ignore\")\n",
+    "\n",
+    "from dask.distributed import Client\n",
+    "import dask.config\n",
+    "dask.config.set({\"array.slicing.split_large_chunks\": False})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e9984a65-454b-4851-8bce-eac94b9c1cf9",
+   "metadata": {},
+   "source": [
+    "- Make sure you have copied the correct tcp here from the `cluster.ipynb` notebook"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "9d04fe62-e1e4-475f-a070-a3e143aff825",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "client = Client(\"tcp://10.12.206.46:41051\")tcp://10.12.206.46:41051"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "67561ea5-8233-4b72-9c7f-ee4b960d24bd",
+   "metadata": {},
+   "source": [
+    "## Here is where you choose your variable, metric and start/end time."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2f37dbda-41c3-40f8-a98a-19e53da1be0a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "variable = \"t2m\" #can be t2m, tp, gh_500\n",
+    "metric = \"rps\" #can be rps, rmse, acc\n",
+    "data = \"anom\"\n",
+    "lead = \"biweekly\" #biweekly or daily\n",
+    "area = \"geospatial\"\n",
+    "start = \"1999-01-01\"\n",
+    "end = \"2020-12-31\" \n",
+    "models = [\"ECMWF\",\"NCEP\",\"ECCC\"] #this notebook uses all three of these models"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6f292d15-abd7-4573-871d-a14669c13cee",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Here we are just setting options for the different metrics and mapping.\n",
+    "if metric == \"acc\":\n",
+    "    comp=\"e2o\"; dim=\"init\"; ens=\"ensmean\" #options for metrics\n",
+    "    cmap=\"RdBu_r\" #options for maps\n",
+    "elif metric==\"rps\":\n",
+    "    comp=\"e2o\"; dim=\"init\"; ens=\"ensmean\" #options for metrics\n",
+    "    cmap=\"viridis\" #options for maps\n",
+    "elif metric==\"rps\":\n",
+    "    comp=\"m2o\"; dim=[\"init\",\"member\"]; ens=\"\" #options for metrics\n",
+    "    cmap=\"viridis\" #options for maps"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "99e9a717-efeb-449e-b7f0-1f49a14ac69b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "142ab702-5777-4f31-b8f7-233010a324dd",
+   "metadata": {},
+   "source": [
+    "## Now we read in and load the data into `dask`\n",
+    "\n",
+    "We are using the intake catalog to find the data and load it up. Make sure you have the file `ASP_data_catalog.yml` in your local directory. Or you can find it here: `/glade/campaign/mmm/c3we/jaye/S2S_zarr/`\n",
+    "\n",
+    "We have an `if` statement here telling us to load in category_edge files, only if our metric of choice is `rps`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "ac0a25d2-f88c-4dab-8832-41514ba6dc37",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "cat = intake.open_catalog('ASP_data_catalog.yml')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "5f86f8f1-e420-404e-a692-4fa6ae23d7bd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "hinds = {}\n",
+    "for m in models:\n",
+    "    hinds[m] = cat[m](data=data, lead=lead, dim=area).to_dask().astype('float32')\n",
+    "verif = cat['OBS'](data=data, lead=lead, dim=area).to_dask().astype('float32')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "58353063-3993-47e7-9470-23f42f9a44e0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Select gridcell over of Buffalo Bill Reservoir\n",
+    "#(43.5 - 45N; 110.5 - 108.5W;  spring forecast)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "bfad1d96-fa72-4d86-bf6d-80f43a92812f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "latpick=\"43.5\"\n",
+    "lonpick=\"109.5\"\n",
+    "#hinds[\"ECMWF\"].sel(lon=lonpick,lat=latpick).drop('lat').drop('lon')\n",
+    "#verif.sel(lon=lonpick,lat=latpick).drop('lat').drop('lon')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "4b1a30c8-eeed-4511-ab6f-68100874088e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if metric == \"rps\":\n",
+    "    hinds_edges = {}\n",
+    "    for m in models:\n",
+    "        hinds_edges[m] = cat['cat_edges'](data=data, model=m, lead=lead, dim=area).to_dask().astype('float32') \\\n",
+    "                         .chunk({\"category_edge\": -1, \"dayofyear\": -1, \"lat\": 45, \"lead\": -1, \"lon\": 60}).persist()\n",
+    "    verif_edges = cat['cat_edges'](data='anom', model='OBS', lead='biweekly', dim='geospatial').to_dask().astype('float32') \\\n",
+    "                  .chunk({\"category_edge\": -1, \"dayofyear\": -1, \"lat\": 45, \"lon\": 60}).persist()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4abbbe09-3f80-4b34-894b-ff98160d263b",
+   "metadata": {},
+   "source": [
+    "- All of the model data is now loaded into a dictionary so that we can have them all together for comparison purposes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2ec857af-73bc-418f-b34a-60af498cd44e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ad41ef1f-1d69-458d-a644-be9b9674e430",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Index(['DJF', 'MAM', 'JJA', 'SON'], dtype='object', name='init') freq = None\n"
+     ]
+    }
+   ],
+   "source": [
+    "# is seasonal data available for all models and rechunk\n",
+    "for h in hinds:\n",
+    "    print(hinds[h].init.dt.season.to_index().unique(), 'freq =',hinds[h].init.to_index().freq) # freq would show weekly but calendar conversion breaks this\n",
+    "    hinds[h] = hinds[h].chunk({\"member\": \"auto\", \"init\": -1, \"lead\": \"auto\", \"lat\": 45, \"lon\": 60}).persist()\n",
+    "    hinds[h] = hinds[h].sel(init=slice(start,end))\n",
+    "verif = verif.sel(time=slice(start,end))\n",
+    "verif = verif.chunk({\"time\": -1, \"lat\": 45, \"lon\": 60})"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3a4a0cc3-cb2e-4efb-9e86-eda65d31c079",
+   "metadata": {},
+   "source": [
+    "## Create a Hindcast Ensemble in climpred for each of the models and run metrics\n",
+    "\n",
+    "We are also setting kwargs (options) for `verify` in climpred. The second cell does the metric calculation using `verify` and computes it. Finally all models are concatenated together and plotted.\n",
+    "\n",
+    "This could take a few minutes to run. If you are curious, check out the `dask` dashboard and you can watch the progress of the computations. The link should be like this: `https://jupyterhub.hpc.ucar.edu/stable/user/jaye/proxy/37030/status`. The number between proxy and status will vary. Your link will be available where you started your dask cluster in `cluster.ipynb`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "261431a6-8691-4f4b-adcf-7cbbfa56761d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "he = {}\n",
+    "met = {}\n",
+    "for h in hinds:\n",
+    "    print(h)\n",
+    "    he[h] = climpred.HindcastEnsemble(hinds[h]).add_observations(verif)\n",
+    "    if metric==\"rps\":\n",
+    "        metric_kwargs = dict(metric=metric, comparison=comp, dim=dim, alignment=\"same_inits\")\n",
+    "        met[h] = he[h].verify(category_edges=(verif_edges, hinds_edges[h]),**metric_kwargs)\n",
+    "    else:\n",
+    "        metric_kwargs = dict(metric=metric, comparison=comp, dim=dim, alignment=\"same_inits\", skipna=True)\n",
+    "        met[h] = he[h].verify(**metric_kwargs)\n",
+    "    met[h] = met[h].compute()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d9088093-46f1-4559-8017-f60ace4d536b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "met_all = xr.concat([met[models[0]], met[models[1]], met[models[2]]], dim='model') \\\n",
+    "          .assign_coords(model=[models[0], models[1], models[2]])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d9017b4e-eb44-4369-b64a-e4fbe5a075be",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "met_all[variable].plot(col='lead',row='model',cmap=cmap,robust=True)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6789ff8e-1667-44cd-aec7-df2fd8c4b931",
+   "metadata": {},
+   "source": [
+    "## Seasonal data\n",
+    "\n",
+    "Now we will create seasonal averages of the data. Prior to this we have been looking at annual data. We use `groupby` here to group into seasons and then run `verify` over each of the seasons and models for the metric of our choice. They are then concatenated together and plotted for `lead=15` (weeks 3-4)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b6e2caeb-09c6-4e40-94ce-542ab2f5c191",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "groupby = \"season\"\n",
+    "met_seas = {}\n",
+    "for h in hinds:\n",
+    "    met_groups = []\n",
+    "    label_groups = []\n",
+    "    # Loops through all inits for a given season.\n",
+    "    for label_group, group in tqdm(he[h].get_initialized().groupby(f\"init.{groupby}\")):\n",
+    "        # select only season inits\n",
+    "        if metric==\"rps\":\n",
+    "            met_group = he[h].sel(init=group.init).verify(category_edges=(verif_edges, hinds_edges[h]),**metric_kwargs)\n",
+    "        else:\n",
+    "            met_group = he[h].sel(init=group.init).verify(**metric_kwargs)\n",
+    "        met_groups.append(met_group)\n",
+    "        label_groups.append(label_group)\n",
+    "    met_groups = xr.concat(met_groups, dim=groupby).assign_coords(season=label_groups)\n",
+    "    met_seas[h] = met_groups.compute()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "498a5714-d225-4d70-a92b-37825ce43fe0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "met_seas_all = xr.concat([met_seas[models[0]], met_seas[models[1]], met_seas[models[2]]], dim='model') \\\n",
+    "               .assign_coords(model=[models[0], models[1], models[2]])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "961da647-a167-432d-9611-ad1f0125797b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "met_seas_all.sel(lead=15)[variable].plot(col=groupby, row='model', robust=True)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7e456f5d-74fa-4b3b-b228-af12d18b4b48",
+   "metadata": {},
+   "source": [
+    "## Area weighting\n",
+    "\n",
+    "Next we run cosine area weighting over that data to get a weighted lat/lon average over the domain. We then print out the weights and plot them on bar charts to compare different seasons and models."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a76f980c-76eb-443a-af54-35d5b55707a7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "weight = met_seas_all.weighted(np.cos(np.deg2rad(met_seas_all.lat))).mean((\"lat\", \"lon\"))[variable].drop('skill')\n",
+    "weight"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "092a4e83-03ca-49ff-9466-4e54f827832f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "seasons = np.array(weight.season)\n",
+    "barWidth = 0.25\n",
+    "rw = np.arange(3)\n",
+    "rw1 = [x + barWidth + 0.025 for x in rw]\n",
+    "rw2 = [x + barWidth + 0.025 for x in rw1]\n",
+    "if weight.min() < 0.:\n",
+    "    ymin = weight.min()*0.6+weight.min()\n",
+    "else:\n",
+    "    ymin = 0.0\n",
+    "ymax = weight.max()*0.6+weight.max()\n",
+    "for s in seasons:\n",
+    "    plt.bar(rw,weight.sel(season=s,model=models[0]), width = barWidth, color = (0, 0.4470, 0.7410), edgecolor=\"white\",label=models[0])\n",
+    "    plt.bar(rw1,weight.sel(season=s,model=models[2]), width = barWidth, color = (0.6350, 0.0780, 0.1840), alpha=0.8,edgecolor=\"white\",label=models[2])\n",
+    "    plt.bar(rw2,weight.sel(season=s,model=models[1]), width = barWidth, color = (0.4, .75, 0.1), alpha=0.8,edgecolor=\"white\",label=models[1])\n",
+    "    plt.xticks([r + barWidth + 0.025 for r in range(3)], [\"Weeks 1-2\", \"Weeks 3-4\", \"Weeks 5-6\"],fontsize=15)\n",
+    "    plt.ylim(ymin,ymax)\n",
+    "    plt.ylabel(metric.upper(),fontsize=18,fontweight=\"bold\")\n",
+    "    plt.xlabel(\"Week\",fontsize=18,fontweight=\"bold\")\n",
+    "    plt.grid()\n",
+    "    plt.legend(borderaxespad=0.6,edgecolor=\"black\",prop={'size': 15},loc=\"upper right\")\n",
+    "    plt.title(variable.upper()+\" \"+metric.upper()+\" for season = \"+s,fontsize=18,fontweight=\"bold\")\n",
+    "    plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a86c1fd7-1e48-47dc-aa0c-a0d442c173f9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aad151dd-64db-4f04-beb9-5f768e923f2f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "s2s-asp",
+   "language": "python",
+   "name": "s2s-asp"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

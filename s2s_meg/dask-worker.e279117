@@ -1,0 +1,23 @@
+2025-10-28 08:18:27,935 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.175:36245'
+2025-10-28 08:18:28,643 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.175:38853
+2025-10-28 08:18:28,643 - distributed.worker - INFO -          Listening to: tcp://128.117.208.175:38853
+2025-10-28 08:18:28,643 - distributed.worker - INFO -           Worker name:              PBSCluster-14
+2025-10-28 08:18:28,643 - distributed.worker - INFO -          dashboard at:      128.117.208.175:34469
+2025-10-28 08:18:28,643 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.175:37535
+2025-10-28 08:18:28,643 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 08:18:28,643 - distributed.worker - INFO -               Threads:                          1
+2025-10-28 08:18:28,643 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-28 08:18:28,643 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-12f8o6gh
+2025-10-28 08:18:28,643 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 08:18:28,918 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-28 08:18:28,918 - distributed.worker - INFO -         Registered to: tcp://128.117.208.175:37535
+2025-10-28 08:18:28,919 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 08:18:28,919 - distributed.core - INFO - Starting established connection to tcp://128.117.208.175:37535
+=>> PBS: job killed: walltime 10827 exceeded limit 10800
+2025-10-28 11:18:53,500 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-28 11:18:53,501 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.175:36245'. Reason: signal-15
+2025-10-28 11:18:53,501 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-28 11:18:53,508 - distributed.nanny - INFO - Worker process 91022 was killed by signal 15
+2025-10-28 11:18:53,535 - distributed.dask_worker - INFO - End worker
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

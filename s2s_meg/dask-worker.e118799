@@ -1,0 +1,216 @@
+2025-10-16 13:22:18,061 - distributed.nanny.memory - WARNING - Ignoring provided memory limit 7.45GiB due to system memory limit of 4.00 GiB
+2025-10-16 13:22:18,063 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.174:35177'
+2025-10-16 13:22:22,415 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.174:33427
+2025-10-16 13:22:22,415 - distributed.worker - INFO -          Listening to: tcp://128.117.208.174:33427
+2025-10-16 13:22:22,415 - distributed.worker - INFO -           Worker name:               PBSCluster-4
+2025-10-16 13:22:22,415 - distributed.worker - INFO -          dashboard at:      128.117.208.174:43223
+2025-10-16 13:22:22,415 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.175:44675
+2025-10-16 13:22:22,416 - distributed.worker - INFO - -------------------------------------------------
+2025-10-16 13:22:22,416 - distributed.worker - INFO -               Threads:                          1
+2025-10-16 13:22:22,416 - distributed.worker - INFO -                Memory:                   4.00 GiB
+2025-10-16 13:22:22,416 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-v123w_99
+2025-10-16 13:22:22,416 - distributed.worker - INFO - -------------------------------------------------
+2025-10-16 13:22:30,250 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-16 13:22:30,250 - distributed.worker - INFO -         Registered to: tcp://128.117.208.175:44675
+2025-10-16 13:22:30,250 - distributed.worker - INFO - -------------------------------------------------
+2025-10-16 13:22:30,251 - distributed.core - INFO - Starting established connection to tcp://128.117.208.175:44675
+2025-10-16 13:22:47,629 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-16 13:23:28,642 - distributed.utils_perf - INFO - full garbage collection released 2.34 GiB from 325 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:23:28,644 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.21 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:23:28,699 - distributed.worker.memory - WARNING - Worker is at 20% memory usage. Resuming worker. Process memory: 846.55 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:23:39,013 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.21 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:23:39,151 - distributed.worker.memory - WARNING - Worker is at 27% memory usage. Resuming worker. Process memory: 1.11 GiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:23:44,287 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.20 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:23:44,418 - distributed.worker.memory - WARNING - Worker is at 19% memory usage. Resuming worker. Process memory: 813.14 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:23:46,502 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.20 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:23:46,651 - distributed.worker.memory - WARNING - Worker is at 20% memory usage. Resuming worker. Process memory: 823.60 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:00,059 - distributed.utils_perf - INFO - full garbage collection released 2.46 GiB from 302 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:24:00,059 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 3.25 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:00,088 - distributed.worker.memory - WARNING - Worker is at 18% memory usage. Resuming worker. Process memory: 769.58 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:15,851 - distributed.utils_perf - INFO - full garbage collection released 2.45 GiB from 203 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:24:15,851 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 3.25 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:15,914 - distributed.worker.memory - WARNING - Worker is at 17% memory usage. Resuming worker. Process memory: 703.52 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:22,816 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.22 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:22,951 - distributed.worker.memory - WARNING - Worker is at 20% memory usage. Resuming worker. Process memory: 837.20 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:30,158 - distributed.utils_perf - INFO - full garbage collection released 2.40 GiB from 166 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:24:30,158 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.21 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:30,226 - distributed.worker.memory - WARNING - Worker is at 20% memory usage. Resuming worker. Process memory: 837.68 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:38,216 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.22 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:38,321 - distributed.worker.memory - WARNING - Worker is at 19% memory usage. Resuming worker. Process memory: 812.52 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:44,122 - distributed.utils_perf - INFO - full garbage collection released 2.45 GiB from 295 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:24:44,122 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 3.25 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:44,522 - distributed.worker.memory - WARNING - Worker is at 17% memory usage. Resuming worker. Process memory: 704.41 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:48,236 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.22 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:48,402 - distributed.worker.memory - WARNING - Worker is at 19% memory usage. Resuming worker. Process memory: 788.78 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:24:53,216 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 3.25 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:53,352 - distributed.worker.memory - WARNING - Worker is at 18% memory usage. Resuming worker. Process memory: 766.52 MiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:55,862 - distributed.utils_perf - INFO - full garbage collection released 2.39 GiB from 108 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:24:55,862 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.22 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:24:55,928 - distributed.worker.memory - WARNING - Worker is at 20% memory usage. Resuming worker. Process memory: 842.17 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:25:00,916 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.21 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:25:01,119 - distributed.worker.memory - WARNING - Worker is at 21% memory usage. Resuming worker. Process memory: 867.16 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:25:08,129 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.22 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:25:08,260 - distributed.worker.memory - WARNING - Worker is at 19% memory usage. Resuming worker. Process memory: 807.71 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:25:28,824 - distributed.utils_perf - INFO - full garbage collection released 2.45 GiB from 364 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:25:28,824 - distributed.worker.memory - WARNING - Worker is at 82% memory usage. Pausing worker.  Process memory: 3.28 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:25:28,877 - distributed.worker.memory - WARNING - Worker is at 19% memory usage. Resuming worker. Process memory: 806.98 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:25:32,883 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 3.25 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:25:33,016 - distributed.worker.memory - WARNING - Worker is at 19% memory usage. Resuming worker. Process memory: 795.11 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+2025-10-16 13:25:44,162 - distributed.utils_perf - INFO - full garbage collection released 2.40 GiB from 58 reference cycles (threshold: 9.54 MiB)
+2025-10-16 13:25:44,162 - distributed.worker.memory - WARNING - Worker is at 81% memory usage. Pausing worker.  Process memory: 3.24 GiB -- Worker memory limit: 4.00 GiB
+2025-10-16 13:25:44,191 - distributed.worker.memory - WARNING - Worker is at 20% memory usage. Resuming worker. Process memory: 820.39 MiB -- Worker memory limit: 4.00 GiB
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/xskillscore/core/np_deterministic.py:314: RuntimeWarning: invalid value encountered in divide
+  r = r_num / r_den
+=>> PBS: job killed: walltime 7216 exceeded limit 7200
+2025-10-16 15:22:22,329 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-16 15:22:22,329 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.174:35177'. Reason: signal-15
+2025-10-16 15:22:22,329 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-16 15:22:22,351 - distributed.nanny - INFO - Worker process 105567 was killed by signal 15
+2025-10-16 15:22:22,355 - distributed.dask_worker - INFO - End worker
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Cgroup memsw limit exceeded: 

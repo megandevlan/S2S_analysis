@@ -1,0 +1,8 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "lat"
+    ],
+    "long_name": "coordinate latitude",
+    "missing_value": 9.999999616903162e+35,
+    "units": "degrees_north"
+}

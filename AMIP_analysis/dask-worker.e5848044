@@ -1,0 +1,82 @@
+2025-08-12 09:21:49,593 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.181:45405'
+2025-08-12 09:21:51,058 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.181:36885
+2025-08-12 09:21:51,059 - distributed.worker - INFO -          Listening to: tcp://128.117.208.181:36885
+2025-08-12 09:21:51,059 - distributed.worker - INFO -           Worker name:              PBSCluster-21
+2025-08-12 09:21:51,059 - distributed.worker - INFO -          dashboard at:      128.117.208.181:43951
+2025-08-12 09:21:51,059 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.173:38575
+2025-08-12 09:21:51,059 - distributed.worker - INFO - -------------------------------------------------
+2025-08-12 09:21:51,059 - distributed.worker - INFO -               Threads:                          1
+2025-08-12 09:21:51,059 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-08-12 09:21:51,059 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-9ii4q36y
+2025-08-12 09:21:51,059 - distributed.worker - INFO - -------------------------------------------------
+2025-08-12 09:21:51,431 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-08-12 09:21:51,431 - distributed.worker - INFO -         Registered to: tcp://128.117.208.173:38575
+2025-08-12 09:21:51,431 - distributed.worker - INFO - -------------------------------------------------
+2025-08-12 09:21:51,431 - distributed.core - INFO - Starting established connection to tcp://128.117.208.173:38575
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+2025-08-12 11:22:22,330 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.180:40241
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2869, in get_data_from_worker
+    response = await send_recv(
+               ^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 140, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://128.117.208.181:53546 remote=tcp://128.117.208.180:40241>: ConnectionResetError: [Errno 104] Connection reset by peer
+2025-08-12 11:22:22,341 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.180:45391
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2866, in get_data_from_worker
+    comm = await rpc.connect(worker)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1623, in connect
+    return await self._connect(addr=addr, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1567, in _connect
+    comm = await connect(
+           ^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/core.py", line 377, in connect
+    handshake = await comm.read()
+                ^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 140, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed)  local=tcp://128.117.208.181:59364 remote=tcp://128.117.208.180:45391>: ConnectionResetError: [Errno 104] Connection reset by peer
+=>> PBS: job killed: walltime 7252 exceeded limit 7200
+2025-08-12 11:22:39,435 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-08-12 11:22:39,435 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.181:45405'. Reason: signal-15
+2025-08-12 11:22:39,435 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-08-12 11:22:39,471 - distributed.nanny - INFO - Worker process 54084 was killed by signal 15
+2025-08-12 11:22:39,474 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,25 @@
+2025-10-23 15:39:14,346 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.174:35721'
+2025-10-23 15:39:16,393 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.174:36823
+2025-10-23 15:39:16,393 - distributed.worker - INFO -          Listening to: tcp://128.117.208.174:36823
+2025-10-23 15:39:16,393 - distributed.worker - INFO -           Worker name:               PBSCluster-6
+2025-10-23 15:39:16,393 - distributed.worker - INFO -          dashboard at:      128.117.208.174:43907
+2025-10-23 15:39:16,393 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.69:38961
+2025-10-23 15:39:16,393 - distributed.worker - INFO - -------------------------------------------------
+2025-10-23 15:39:16,393 - distributed.worker - INFO -               Threads:                          1
+2025-10-23 15:39:16,393 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-23 15:39:16,393 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-qn9xdjnu
+2025-10-23 15:39:16,393 - distributed.worker - INFO - -------------------------------------------------
+2025-10-23 15:39:20,517 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-23 15:39:20,519 - distributed.worker - INFO -         Registered to: tcp://128.117.208.69:38961
+2025-10-23 15:39:20,519 - distributed.worker - INFO - -------------------------------------------------
+2025-10-23 15:39:20,520 - distributed.core - INFO - Starting established connection to tcp://128.117.208.69:38961
+2025-10-23 15:41:49,610 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.55s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-23 15:42:05,608 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.43s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-23 15:43:12,748 - distributed.utils_perf - INFO - full garbage collection released 2.18 GiB from 13302 reference cycles (threshold: 9.54 MiB)
+2025-10-23 16:05:49,967 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-23 16:05:49,970 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.174:35721'. Reason: signal-15
+2025-10-23 16:05:49,970 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-23 16:05:50,020 - distributed.nanny - INFO - Worker process 56407 was killed by signal 15
+2025-10-23 16:05:50,023 - distributed.dask_worker - INFO - End worker
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

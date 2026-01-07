@@ -1,0 +1,23 @@
+2025-10-23 15:39:15,017 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.182:43547'
+2025-10-23 15:39:17,579 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.182:33441
+2025-10-23 15:39:17,579 - distributed.worker - INFO -          Listening to: tcp://128.117.208.182:33441
+2025-10-23 15:39:17,579 - distributed.worker - INFO -           Worker name:               PBSCluster-3
+2025-10-23 15:39:17,579 - distributed.worker - INFO -          dashboard at:      128.117.208.182:33109
+2025-10-23 15:39:17,579 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.69:38961
+2025-10-23 15:39:17,579 - distributed.worker - INFO - -------------------------------------------------
+2025-10-23 15:39:17,579 - distributed.worker - INFO -               Threads:                          1
+2025-10-23 15:39:17,579 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-23 15:39:17,579 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-cduitoa0
+2025-10-23 15:39:17,579 - distributed.worker - INFO - -------------------------------------------------
+2025-10-23 15:39:21,158 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-23 15:39:21,159 - distributed.worker - INFO -         Registered to: tcp://128.117.208.69:38961
+2025-10-23 15:39:21,159 - distributed.worker - INFO - -------------------------------------------------
+2025-10-23 15:39:21,160 - distributed.core - INFO - Starting established connection to tcp://128.117.208.69:38961
+2025-10-23 15:41:49,631 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-23 16:05:49,770 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-23 16:05:49,790 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.182:43547'. Reason: signal-15
+2025-10-23 16:05:49,790 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-23 16:05:49,791 - distributed.nanny - INFO - Worker process 128864 was killed by signal 15
+2025-10-23 16:05:49,794 - distributed.dask_worker - INFO - End worker
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

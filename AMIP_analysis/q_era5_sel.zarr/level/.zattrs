@@ -1,0 +1,9 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "level"
+    ],
+    "alternate_units": "millibar",
+    "long_name": "pressure level",
+    "short_name": "plev",
+    "units": "hPa"
+}

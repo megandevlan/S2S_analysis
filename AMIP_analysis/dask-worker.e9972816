@@ -1,0 +1,24 @@
+2025-10-06 11:42:06,225 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.177:45961'
+/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/contextlib.py:144: UserWarning: Creating scratch directories is taking a surprisingly long time. (1.44s) This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+2025-10-06 11:42:08,304 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.177:46299
+2025-10-06 11:42:08,304 - distributed.worker - INFO -          Listening to: tcp://128.117.208.177:46299
+2025-10-06 11:42:08,304 - distributed.worker - INFO -           Worker name:              PBSCluster-11
+2025-10-06 11:42:08,304 - distributed.worker - INFO -          dashboard at:      128.117.208.177:45093
+2025-10-06 11:42:08,304 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.181:46275
+2025-10-06 11:42:08,304 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:42:08,304 - distributed.worker - INFO -               Threads:                          1
+2025-10-06 11:42:08,304 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-06 11:42:08,304 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-4jsdmvpa
+2025-10-06 11:42:08,304 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:42:08,860 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-06 11:42:08,861 - distributed.worker - INFO -         Registered to: tcp://128.117.208.181:46275
+2025-10-06 11:42:08,861 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:42:08,861 - distributed.core - INFO - Starting established connection to tcp://128.117.208.181:46275
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+=>> PBS: job killed: walltime 3715 exceeded limit 3600
+2025-10-06 12:43:58,789 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-06 12:43:58,790 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.177:45961'. Reason: signal-15
+2025-10-06 12:43:58,790 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-06 12:43:58,843 - distributed.nanny - INFO - Worker process 12363 was killed by signal 15
+2025-10-06 12:43:58,845 - distributed.dask_worker - INFO - End worker

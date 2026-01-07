@@ -1,0 +1,130 @@
+2025-08-12 09:21:50,252 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.201:37445'
+2025-08-12 09:21:51,463 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.201:40001
+2025-08-12 09:21:51,463 - distributed.worker - INFO -          Listening to: tcp://128.117.208.201:40001
+2025-08-12 09:21:51,463 - distributed.worker - INFO -           Worker name:              PBSCluster-40
+2025-08-12 09:21:51,463 - distributed.worker - INFO -          dashboard at:      128.117.208.201:38075
+2025-08-12 09:21:51,463 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.173:38575
+2025-08-12 09:21:51,463 - distributed.worker - INFO - -------------------------------------------------
+2025-08-12 09:21:51,463 - distributed.worker - INFO -               Threads:                          1
+2025-08-12 09:21:51,463 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-08-12 09:21:51,463 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-rdmvwys4
+2025-08-12 09:21:51,463 - distributed.worker - INFO - -------------------------------------------------
+2025-08-12 09:21:51,870 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-08-12 09:21:51,871 - distributed.worker - INFO -         Registered to: tcp://128.117.208.173:38575
+2025-08-12 09:21:51,871 - distributed.worker - INFO - -------------------------------------------------
+2025-08-12 09:21:51,871 - distributed.core - INFO - Starting established connection to tcp://128.117.208.173:38575
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+2025-08-12 11:22:39,460 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.181:43209
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 227, in read
+    frames_nosplit = await read_bytes_rw(stream, frames_nosplit_nbytes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 366, in read_bytes_rw
+    actual = await stream.read_into(chunk)  # type: ignore[arg-type]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2869, in get_data_from_worker
+    response = await send_recv(
+               ^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://128.117.208.201:38602 remote=tcp://128.117.208.181:43209>: Stream is closed
+2025-08-12 11:22:39,465 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.181:43533
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 227, in read
+    frames_nosplit = await read_bytes_rw(stream, frames_nosplit_nbytes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 366, in read_bytes_rw
+    actual = await stream.read_into(chunk)  # type: ignore[arg-type]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2869, in get_data_from_worker
+    response = await send_recv(
+               ^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://128.117.208.201:57376 remote=tcp://128.117.208.181:43533>: Stream is closed
+2025-08-12 11:22:39,469 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.181:36885
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 230, in read
+    buffer = await read_bytes_rw(stream, buffer_nbytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 366, in read_bytes_rw
+    actual = await stream.read_into(chunk)  # type: ignore[arg-type]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2869, in get_data_from_worker
+    response = await send_recv(
+               ^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://128.117.208.201:43284 remote=tcp://128.117.208.181:36885>: Stream is closed
+2025-08-12 11:22:39,504 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.181:38657
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 230, in read
+    buffer = await read_bytes_rw(stream, buffer_nbytes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 366, in read_bytes_rw
+    actual = await stream.read_into(chunk)  # type: ignore[arg-type]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tornado.iostream.StreamClosedError: Stream is closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2869, in get_data_from_worker
+    response = await send_recv(
+               ^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://128.117.208.201:33314 remote=tcp://128.117.208.181:38657>: Stream is closed
+=>> PBS: job killed: walltime 7321 exceeded limit 7200
+2025-08-12 11:23:55,741 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-08-12 11:23:55,741 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.201:37445'. Reason: signal-15
+2025-08-12 11:23:55,741 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-08-12 11:23:55,791 - distributed.nanny - INFO - Worker process 90390 was killed by signal 15
+2025-08-12 11:23:55,794 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,11 @@
+WARNING: The MAMBA_ROOT_PREFIX environment variable is not set.
+WARNING: This is required for mamba to work correctly as of 2.0.
+WARNING: 
+WARNING: For now, we are setting 'MAMBA_ROOT_PREFIX' to '/glade/u/apps/opt/conda'.
+WARNING: 
+WARNING: Please make sure this is consistent with your installation or alternatively (by order of preference):
+WARNING:   - rerun 'mamba shell init' to initialize mamba for your current shell
+WARNING:   - manually set 'MAMBA_ROOT_PREFIX' to the root of your installation in your shell profile script.
+WARNING:   - use the '-r,--root-prefix' CLI option when calling mamba.
+WARNING: 
+WARNING: This message originates from /glade/u/apps/opt/conda/etc/profile.d/mamba.sh

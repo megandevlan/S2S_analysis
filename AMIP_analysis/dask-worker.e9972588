@@ -1,0 +1,31 @@
+2025-10-06 11:16:38,255 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.182:43075'
+2025-10-06 11:16:39,196 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.182:41325
+2025-10-06 11:16:39,198 - distributed.worker - INFO -          Listening to: tcp://128.117.208.182:41325
+2025-10-06 11:16:39,198 - distributed.worker - INFO -           Worker name:               PBSCluster-7
+2025-10-06 11:16:39,198 - distributed.worker - INFO -          dashboard at:      128.117.208.182:45291
+2025-10-06 11:16:39,198 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.181:42421
+2025-10-06 11:16:39,198 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:16:39,199 - distributed.worker - INFO -               Threads:                          1
+2025-10-06 11:16:39,199 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-06 11:16:39,199 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-b6q1v01x
+2025-10-06 11:16:39,199 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:16:39,773 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-06 11:16:39,774 - distributed.worker - INFO -         Registered to: tcp://128.117.208.181:42421
+2025-10-06 11:16:39,774 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:16:39,774 - distributed.core - INFO - Starting established connection to tcp://128.117.208.181:42421
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+2025-10-06 11:37:33,091 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.32s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-06 11:40:56,469 - distributed.worker - WARNING - Compute Failed
+Key:       ('getitem-open_dataset-LHFLX-concatenate-b7cace0c8ba4ee1bc7739a60db1f33f2', 91, 0, 0)
+State:     executing
+Function:  getter
+args:      (ImplicitToExplicitIndexingAdapter(array=CopyOnWriteArray(array=LazilyIndexedArray(array=<xarray.backends.netCDF4_.NetCDF4ArrayWrapper object at 0x14fed4bfcf00>, key=BasicIndexer((slice(None, None, None), slice(None, None, None), slice(None, None, None)))))), (slice(10, 20, None), slice(117, 149, None), slice(184, 235, None)))
+kwargs:    {}
+Exception: "RuntimeError('NetCDF: Not a valid ID')"
+Traceback: '  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/dask/array/core.py", line 118, in getter\n    c = np.asarray(c)\n        ^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/core/indexing.py", line 573, in __array__\n    return np.asarray(self.get_duck_array(), dtype=dtype)\n                      ^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/core/indexing.py", line 576, in get_duck_array\n    return self.array.get_duck_array()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/core/indexing.py", line 787, in get_duck_array\n    return self.array.get_duck_array()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/core/indexing.py", line 650, in get_duck_array\n    array = self.array[self.key]\n            ~~~~~~~~~~^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 100, in __getitem__\n    return indexing.explicit_indexing_adapter(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/core/indexing.py", line 1014, in explicit_indexing_adapter\n    result = raw_indexing_method(raw_key.tuple)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/glade/u/apps/opt/conda/envs/npl-2024b/lib/python3.11/site-packages/xarray/backends/netCDF4_.py", line 113, in _getitem\n    array = getitem(original_array, key)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "src/netCDF4/_netCDF4.pyx", line 4981, in netCDF4._netCDF4.Variable.__getitem__\n  File "src/netCDF4/_netCDF4.pyx", line 6045, in netCDF4._netCDF4.Variable._get\n  File "src/netCDF4/_netCDF4.pyx", line 4577, in netCDF4._netCDF4.Variable.dimensions.__get__\n  File "src/netCDF4/_netCDF4.pyx", line 4512, in netCDF4._netCDF4.Variable._getdims\n  File "src/netCDF4/_netCDF4.pyx", line 2142, in netCDF4._netCDF4._inq_vardimid\n  File "src/netCDF4/_netCDF4.pyx", line 2134, in netCDF4._netCDF4._inq_varndims\n  File "src/netCDF4/_netCDF4.pyx", line 2113, in netCDF4._netCDF4._ensure_nc_success\n'
+
+2025-10-06 11:41:19,317 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-06 11:41:19,319 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.182:43075'. Reason: signal-15
+2025-10-06 11:41:19,319 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-06 11:41:19,348 - distributed.nanny - INFO - Worker process 64349 was killed by signal 15
+2025-10-06 11:41:19,351 - distributed.dask_worker - INFO - End worker

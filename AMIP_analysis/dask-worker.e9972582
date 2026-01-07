@@ -1,0 +1,22 @@
+2025-10-06 11:16:37,586 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.178:41731'
+2025-10-06 11:16:39,242 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.178:46393
+2025-10-06 11:16:39,245 - distributed.worker - INFO -          Listening to: tcp://128.117.208.178:46393
+2025-10-06 11:16:39,245 - distributed.worker - INFO -           Worker name:              PBSCluster-11
+2025-10-06 11:16:39,245 - distributed.worker - INFO -          dashboard at:      128.117.208.178:35059
+2025-10-06 11:16:39,245 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.181:42421
+2025-10-06 11:16:39,245 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:16:39,245 - distributed.worker - INFO -               Threads:                          1
+2025-10-06 11:16:39,245 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-06 11:16:39,245 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-qmo7y50f
+2025-10-06 11:16:39,245 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:16:39,770 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-06 11:16:39,770 - distributed.worker - INFO -         Registered to: tcp://128.117.208.181:42421
+2025-10-06 11:16:39,770 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:16:39,770 - distributed.core - INFO - Starting established connection to tcp://128.117.208.181:42421
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+2025-10-06 11:37:02,156 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.59s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2025-10-06 11:41:19,039 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-06 11:41:19,041 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.178:41731'. Reason: signal-15
+2025-10-06 11:41:19,042 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-06 11:41:19,063 - distributed.nanny - INFO - Worker process 20821 was killed by signal 15
+2025-10-06 11:41:19,065 - distributed.dask_worker - INFO - End worker

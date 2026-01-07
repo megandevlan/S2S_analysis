@@ -1,0 +1,22 @@
+2025-10-06 11:42:05,399 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.176:40621'
+2025-10-06 11:42:06,497 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.176:33763
+2025-10-06 11:42:06,497 - distributed.worker - INFO -          Listening to: tcp://128.117.208.176:33763
+2025-10-06 11:42:06,497 - distributed.worker - INFO -           Worker name:               PBSCluster-5
+2025-10-06 11:42:06,497 - distributed.worker - INFO -          dashboard at:      128.117.208.176:37903
+2025-10-06 11:42:06,497 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.181:46275
+2025-10-06 11:42:06,497 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:42:06,497 - distributed.worker - INFO -               Threads:                          1
+2025-10-06 11:42:06,497 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-06 11:42:06,497 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-_m3qf3qp
+2025-10-06 11:42:06,497 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:42:07,747 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-06 11:42:07,747 - distributed.worker - INFO -         Registered to: tcp://128.117.208.181:46275
+2025-10-06 11:42:07,748 - distributed.worker - INFO - -------------------------------------------------
+2025-10-06 11:42:07,748 - distributed.core - INFO - Starting established connection to tcp://128.117.208.181:46275
+ERROR 1: PROJ: proj_create_from_database: Open of /glade/u/apps/opt/conda/envs/npl-2024b/share/proj failed
+=>> PBS: job killed: walltime 3686 exceeded limit 3600
+2025-10-06 12:43:28,065 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-06 12:43:28,065 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.176:40621'. Reason: signal-15
+2025-10-06 12:43:28,065 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-06 12:43:28,083 - distributed.nanny - INFO - Worker process 76980 was killed by signal 15
+2025-10-06 12:43:28,086 - distributed.dask_worker - INFO - End worker

@@ -1,0 +1,5 @@
+{
+    "cell_methods": "time: mean",
+    "long_name": "soil liquid water + ice in top 10cm of soil (veg landunits only)",
+    "units": "kg/m2"
+}

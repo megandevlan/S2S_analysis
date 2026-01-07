@@ -1,0 +1,21 @@
+2025-10-28 08:51:15,730 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.176:39659'
+2025-10-28 08:51:16,364 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.176:39149
+2025-10-28 08:51:16,364 - distributed.worker - INFO -          Listening to: tcp://128.117.208.176:39149
+2025-10-28 08:51:16,364 - distributed.worker - INFO -           Worker name:               PBSCluster-3
+2025-10-28 08:51:16,364 - distributed.worker - INFO -          dashboard at:      128.117.208.176:35527
+2025-10-28 08:51:16,365 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.175:40923
+2025-10-28 08:51:16,365 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 08:51:16,365 - distributed.worker - INFO -               Threads:                          1
+2025-10-28 08:51:16,365 - distributed.worker - INFO -                Memory:                   7.45 GiB
+2025-10-28 08:51:16,365 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-xyu28wm_
+2025-10-28 08:51:16,365 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 08:51:16,583 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-28 08:51:16,583 - distributed.worker - INFO -         Registered to: tcp://128.117.208.175:40923
+2025-10-28 08:51:16,583 - distributed.worker - INFO - -------------------------------------------------
+2025-10-28 08:51:16,584 - distributed.core - INFO - Starting established connection to tcp://128.117.208.175:40923
+2025-10-28 08:53:50,092 - distributed.core - INFO - Connection to tcp://128.117.208.175:40923 has been closed.
+2025-10-28 08:53:50,094 - distributed.worker - INFO - Stopping worker at tcp://128.117.208.176:39149. Reason: worker-handle-scheduler-connection-broken
+2025-10-28 08:53:50,097 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://128.117.208.176:39659'. Reason: worker-handle-scheduler-connection-broken
+2025-10-28 08:53:50,105 - distributed.nanny - INFO - Worker closed
+2025-10-28 08:53:52,344 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.176:39659'. Reason: nanny-close-gracefully
+2025-10-28 08:53:52,345 - distributed.dask_worker - INFO - End worker

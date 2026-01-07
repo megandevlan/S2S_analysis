@@ -1,0 +1,58 @@
+2025-10-15 12:25:15,108 - distributed.nanny.memory - WARNING - Ignoring provided memory limit 7.45GiB due to system memory limit of 4.00 GiB
+2025-10-15 12:25:15,111 - distributed.nanny - INFO -         Start Nanny at: 'tcp://128.117.208.178:35445'
+2025-10-15 12:25:15,837 - distributed.worker - INFO -       Start worker at: tcp://128.117.208.178:43765
+2025-10-15 12:25:15,837 - distributed.worker - INFO -          Listening to: tcp://128.117.208.178:43765
+2025-10-15 12:25:15,837 - distributed.worker - INFO -           Worker name:               PBSCluster-5
+2025-10-15 12:25:15,837 - distributed.worker - INFO -          dashboard at:      128.117.208.178:41183
+2025-10-15 12:25:15,837 - distributed.worker - INFO - Waiting to connect to: tcp://128.117.208.178:36819
+2025-10-15 12:25:15,837 - distributed.worker - INFO - -------------------------------------------------
+2025-10-15 12:25:15,837 - distributed.worker - INFO -               Threads:                          1
+2025-10-15 12:25:15,837 - distributed.worker - INFO -                Memory:                   4.00 GiB
+2025-10-15 12:25:15,837 - distributed.worker - INFO -       Local Directory: /glade/derecho/scratch/mdfowler/tmp/dask-scratch-space/worker-jyc0_xc9
+2025-10-15 12:25:15,837 - distributed.worker - INFO - -------------------------------------------------
+2025-10-15 12:25:18,942 - distributed.worker - INFO - Starting Worker plugin shuffle
+2025-10-15 12:25:18,942 - distributed.worker - INFO -         Registered to: tcp://128.117.208.178:36819
+2025-10-15 12:25:18,942 - distributed.worker - INFO - -------------------------------------------------
+2025-10-15 12:25:18,943 - distributed.core - INFO - Starting established connection to tcp://128.117.208.178:36819
+2025-10-15 12:40:30,910 - distributed.utils_perf - INFO - full garbage collection released 2.37 GiB from 394 reference cycles (threshold: 9.54 MiB)
+2025-10-15 12:40:30,910 - distributed.worker.memory - WARNING - Worker is at 85% memory usage. Pausing worker.  Process memory: 3.40 GiB -- Worker memory limit: 4.00 GiB
+2025-10-15 12:40:30,964 - distributed.worker.memory - WARNING - Worker is at 23% memory usage. Resuming worker. Process memory: 0.94 GiB -- Worker memory limit: 4.00 GiB
+2025-10-15 12:40:31,226 - distributed.worker - ERROR - Worker stream died during communication: tcp://128.117.208.178:36107
+Traceback (most recent call last):
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2059, in gather_dep
+    response = await get_data_from_worker(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/worker.py", line 2869, in get_data_from_worker
+    response = await send_recv(
+               ^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/core.py", line 1157, in send_recv
+    response = await comm.read(deserializers=deserializers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 236, in read
+    convert_stream_closed_error(self, e)
+  File "/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/site-packages/distributed/comm/tcp.py", line 140, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) Ephemeral Worker->Worker for gather local=tcp://128.117.208.178:59830 remote=tcp://128.117.208.178:36107>: ConnectionResetError: [Errno 104] Connection reset by peer
+2025-10-15 12:41:24,113 - distributed.utils_perf - INFO - full garbage collection released 2.46 GiB from 177 reference cycles (threshold: 9.54 MiB)
+2025-10-15 12:41:24,114 - distributed.worker.memory - WARNING - Worker is at 80% memory usage. Pausing worker.  Process memory: 3.24 GiB -- Worker memory limit: 4.00 GiB
+2025-10-15 12:41:24,138 - distributed.worker.memory - WARNING - Worker is at 18% memory usage. Resuming worker. Process memory: 759.70 MiB -- Worker memory limit: 4.00 GiB
+=>> PBS: job killed: walltime 7201 exceeded limit 7200
+2025-10-15 14:25:13,655 - distributed._signals - INFO - Received signal SIGTERM (15)
+2025-10-15 14:25:13,656 - distributed.nanny - INFO - Closing Nanny at 'tcp://128.117.208.178:35445'. Reason: signal-15
+2025-10-15 14:25:13,656 - distributed.nanny - INFO - Nanny asking worker to close. Reason: signal-15
+2025-10-15 14:25:13,674 - distributed.nanny - INFO - Worker process 86533 was killed by signal 15
+2025-10-15 14:25:13,702 - distributed.dask_worker - INFO - End worker
+/glade/work/mdfowler/conda-envs/my-npl-2024b/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Cgroup memsw limit exceeded: 

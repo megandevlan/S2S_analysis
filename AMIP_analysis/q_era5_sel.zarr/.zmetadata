@@ -1,0 +1,204 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "CONVERSION_DATE": "Fri Jul 12 06:35:02 MDT 2019",
+            "CONVERSION_PLATFORM": "Linux casper05 3.10.0-693.21.1.el7.x86_64 #1 SMP Wed Mar 7 19:03:37 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux",
+            "Conventions": "CF-1.6",
+            "DATA_SOURCE": "ECMWF: https://cds.climate.copernicus.eu, Copernicus Climate Data Store",
+            "NCO": "netCDF Operators version 4.7.4 (http://nco.sf.net)",
+            "NETCDF_COMPRESSION": "NCO: Precision-preserving compression to netCDF4/HDF5 (see \"history\" and \"NCO\" global attributes below for specifics).",
+            "NETCDF_CONVERSION": "CISL RDA: Conversion from ECMWF GRIB 1 data to netCDF4.",
+            "NETCDF_VERSION": "4.6.1",
+            "history": "Fri Jul 12 06:35:34 2019: ncks -4 --ppc default=7 e5.oper.an.pl.128_133_q.ll025sc.1995060100_1995060123.unc.nc e5.oper.an.pl.128_133_q.ll025sc.1995060100_1995060123.nc"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "Q/.zarray": {
+            "chunks": [
+                1,
+                16,
+                42,
+                61
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1012,
+                16,
+                42,
+                61
+            ],
+            "zarr_format": 2
+        },
+        "Q/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time",
+                "level",
+                "lat",
+                "lon"
+            ],
+            "ecmwf_local_table": 128,
+            "ecmwf_parameter": 133,
+            "grid_specification": "0.25 degree x 0.25 degree from 90N to 90S and 0E to 359.75E (721 x 1440 Latitude/Longitude)",
+            "long_name": "Specific humidity",
+            "maximum_value": 0.02455337718129158,
+            "minimum_value": -4.271717625670135e-05,
+            "number_of_significant_digits": 7,
+            "original_format": "WMO GRIB 1 with ECMWF local table",
+            "rda_dataset": "ds633.0",
+            "rda_dataset_doi": "DOI: 10.5065/BH6N-5N20",
+            "rda_dataset_group": "ERA5 atmospheric pressure level analysis [netCDF4]",
+            "rda_dataset_url": "https:/rda.ucar.edu/datasets/ds633.0/",
+            "short_name": "q",
+            "units": "kg kg**-1"
+        },
+        "lat/.zarray": {
+            "chunks": [
+                42
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                42
+            ],
+            "zarr_format": 2
+        },
+        "lat/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lat"
+            ],
+            "long_name": "latitude",
+            "units": "degrees_north"
+        },
+        "level/.zarray": {
+            "chunks": [
+                16
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                16
+            ],
+            "zarr_format": 2
+        },
+        "level/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "level"
+            ],
+            "alternate_units": "millibar",
+            "long_name": "pressure level",
+            "short_name": "plev",
+            "units": "hPa"
+        },
+        "lon/.zarray": {
+            "chunks": [
+                61
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                61
+            ],
+            "zarr_format": 2
+        },
+        "lon/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lon"
+            ],
+            "long_name": "longitude",
+            "units": "degrees_east"
+        },
+        "time/.zarray": {
+            "chunks": [
+                1012
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1012
+            ],
+            "zarr_format": 2
+        },
+        "time/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "calendar": "proleptic_gregorian",
+            "units": "days since 1995-06-01 00:00:00"
+        },
+        "utc_date/.zarray": {
+            "chunks": [
+                1
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f8",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                1012
+            ],
+            "zarr_format": 2
+        },
+        "utc_date/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "time"
+            ],
+            "long_name": "UTC date yyyy-mm-dd hh:00:00 as yyyymmddhh",
+            "units": "Gregorian_year month day hour"
+        }
+    },
+    "zarr_consolidated_format": 1
+}

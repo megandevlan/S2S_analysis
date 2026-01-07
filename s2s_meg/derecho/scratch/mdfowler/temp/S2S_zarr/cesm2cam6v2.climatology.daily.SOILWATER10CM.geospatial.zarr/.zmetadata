@@ -1,0 +1,156 @@
+{
+    "metadata": {
+        ".zattrs": {
+            "cell_methods": "time: mean",
+            "long_name": "soil liquid water + ice in top 10cm of soil (veg landunits only)",
+            "units": "kg/m2"
+        },
+        ".zgroup": {
+            "zarr_format": 2
+        },
+        "SOILWATER_10CM/.zarray": {
+            "chunks": [
+                366,
+                1,
+                181,
+                288
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": "NaN",
+            "filters": null,
+            "order": "C",
+            "shape": [
+                366,
+                46,
+                192,
+                288
+            ],
+            "zarr_format": 2
+        },
+        "SOILWATER_10CM/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dayofyear",
+                "lead",
+                "lat",
+                "lon"
+            ],
+            "cell_methods": "time: mean",
+            "long_name": "soil liquid water + ice in top 10cm of soil (veg landunits only)",
+            "units": "kg/m2"
+        },
+        "dayofyear/.zarray": {
+            "chunks": [
+                366
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                366
+            ],
+            "zarr_format": 2
+        },
+        "dayofyear/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "dayofyear"
+            ]
+        },
+        "lat/.zarray": {
+            "chunks": [
+                192
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999999616903162e+35,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                192
+            ],
+            "zarr_format": 2
+        },
+        "lat/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lat"
+            ],
+            "long_name": "coordinate latitude",
+            "missing_value": 9.999999616903162e+35,
+            "units": "degrees_north"
+        },
+        "lead/.zarray": {
+            "chunks": [
+                46
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<i8",
+            "fill_value": null,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                46
+            ],
+            "zarr_format": 2
+        },
+        "lead/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lead"
+            ]
+        },
+        "lon/.zarray": {
+            "chunks": [
+                288
+            ],
+            "compressor": {
+                "blocksize": 0,
+                "clevel": 5,
+                "cname": "lz4",
+                "id": "blosc",
+                "shuffle": 1
+            },
+            "dtype": "<f4",
+            "fill_value": 9.999999616903162e+35,
+            "filters": null,
+            "order": "C",
+            "shape": [
+                288
+            ],
+            "zarr_format": 2
+        },
+        "lon/.zattrs": {
+            "_ARRAY_DIMENSIONS": [
+                "lon"
+            ],
+            "long_name": "coordinate longitude",
+            "missing_value": 9.999999616903162e+35,
+            "units": "degrees_east"
+        }
+    },
+    "zarr_consolidated_format": 1
+}
